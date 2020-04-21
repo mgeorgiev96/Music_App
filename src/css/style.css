@@ -1,0 +1,228 @@
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 35vh;
+  position: relative;
+}
+header img {
+  width: 75%;
+  height: 130%;
+  position: absolute;
+  z-index: 0;
+  right: 0;
+}
+header h1 {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  font-size: 4rem;
+  color: white;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.filter_container {
+  width: 46%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.filter_container div {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.filter_container div span {
+  background-image: linear-gradient(to right, orange, crimson);
+  z-index: 1;
+}
+.filter_container div:hover .box1 {
+  width: 100%;
+  height: 4px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: animate 2s linear infinite;
+}
+.filter_container div:hover .box2 {
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  animation: animate 2s linear infinite reverse;
+}
+
+.filter {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+
+i {
+  color: white;
+  z-index: 1;
+  margin-left: 10px;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+}
+i:hover {
+  transform: scale(0.95);
+  color: green;
+  transition: 500ms;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 15%);
+  border: 1px solid black;
+  grid-gap: 1.5rem;
+  justify-content: center;
+}
+.container:hover .item_container {
+  transform: scale(1.03);
+  transition: 500ms;
+}
+.container .item_container {
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  border: 1px dotted white;
+}
+.container .item_container a {
+  text-decoration: none;
+  color: crimson;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.container .item_container a:visited {
+  color: crimson;
+}
+.container .item_container a:hover {
+  transform: scale(1.1);
+  transition: 350ms;
+  text-decoration: underline;
+}
+.container .item_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.container .item_container:hover {
+  transition: 500ms;
+  transform: scale(1.1);
+}
+.container .item_container:hover img {
+  z-index: -1;
+  transition: 500ms;
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+.item_container::after {
+  content: "";
+  position: absolute;
+  background-color: brown;
+  width: 60px;
+  height: 60px;
+  left: -50%;
+  transform: rotate(45deg);
+}
+
+.item_container::before {
+  content: "";
+  position: absolute;
+  background-color: brown;
+  width: 60px;
+  height: 60px;
+  right: -50%;
+  transform: rotate(45deg);
+}
+
+.item_container {
+  overflow: hidden;
+}
+.item_container:hover::after {
+  left: -12%;
+  transition: 500ms;
+}
+.item_container:hover::before {
+  right: -12%;
+  transition: 500ms;
+}
+
+@media all and (max-width: 900px) {
+  .filter_container {
+    width: 60%;
+  }
+  .filter_container .filter {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .filter_container i {
+    font-size: 2rem;
+  }
+
+  .item_container::after {
+    width: 0;
+    height: 0;
+  }
+
+  .item_container::before {
+    width: 0;
+    height: 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, 21%);
+  }
+  .container .item_container a {
+    font-size: 0.9rem;
+  }
+  .container .item_container h2 {
+    font-size: 1rem;
+  }
+  .container .item_container h3 {
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    left: 6%;
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
