@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Music_App/static/css/main.009bff14.chunk.css",
+    "main.js": "/Music_App/static/js/main.a1628a76.chunk.js",
+    "main.js.map": "/Music_App/static/js/main.a1628a76.chunk.js.map",
+    "runtime-main.js": "/Music_App/static/js/runtime-main.8656e4a0.js",
+    "runtime-main.js.map": "/Music_App/static/js/runtime-main.8656e4a0.js.map",
+    "static/js/2.7e5a4f10.chunk.js": "/Music_App/static/js/2.7e5a4f10.chunk.js",
+    "static/js/2.7e5a4f10.chunk.js.map": "/Music_App/static/js/2.7e5a4f10.chunk.js.map",
+    "index.html": "/Music_App/index.html",
+    "precache-manifest.892d68752c64a273163e1803833e44dc.js": "/Music_App/precache-manifest.892d68752c64a273163e1803833e44dc.js",
+    "service-worker.js": "/Music_App/service-worker.js",
+    "static/css/main.009bff14.chunk.css.map": "/Music_App/static/css/main.009bff14.chunk.css.map",
+    "static/js/2.7e5a4f10.chunk.js.LICENSE.txt": "/Music_App/static/js/2.7e5a4f10.chunk.js.LICENSE.txt",
+    "static/media/dark-rider-JmVaNyemtN8-unsplash.jpg": "/Music_App/static/media/dark-rider-JmVaNyemtN8-unsplash.ad8348e9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8656e4a0.js",
+    "static/js/2.7e5a4f10.chunk.js",
+    "static/css/main.009bff14.chunk.css",
+    "static/js/main.a1628a76.chunk.js"
+  ]
+}
